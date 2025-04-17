@@ -132,14 +132,14 @@
       </template>
       <!-- TODO Section end -->
 
-      <section x-data class="todo-list">
+      <section class="todo-list">
         <ul class="items">
           <!-- item start -->
-          <template x-for="todo in $store.TODO.todos">
+          <template x-for="todo in todos">
             <li class="completed">
               <div class="item-content">
                 <label>
-                  <input @click="toggleTodo(todo.id)" type="checkbox" :checked="todo.complete_at" />
+                  <input @click="toggleTodo(todo.id)" type="checkbox" :checked="todo.completed_at" />
                   <p x-text="todo.content"  class="content"></p>
                 </label>
               </div>
